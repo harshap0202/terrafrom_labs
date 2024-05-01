@@ -1,0 +1,4 @@
+here we make the resources dependent on each one other
+
+by using "depends_on" argument, we can make sure that one resource will run
+only after the the other resource mentioned in "depends_on" argument is complete

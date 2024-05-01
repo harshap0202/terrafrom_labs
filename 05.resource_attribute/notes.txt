@@ -1,0 +1,7 @@
+here we use resource attribute
+
+We can link two resources together by making use of resource attributes.
+on running the apply command, 
+Terraform creates a file and a random_pet resource.
+and name of the random_pet is on terminal as an ID
+which we can access by ${random_pet.info.id}

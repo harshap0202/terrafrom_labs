@@ -1,0 +1,4 @@
+here we use providers run in terrafrom
+
+When we run Terraform init within a directory containing the configuration files, 
+Terraform downloads and installs plugins for the providers used within the configuration.

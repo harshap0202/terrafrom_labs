@@ -1,0 +1,8 @@
+here we use for_each meta-argument
+
+this argument also runs the same instance mulitple times.
+but few notable changes.
+this takes "set" as the input
+hence no instance will be repeated.
+
+in given example. the varaibles.tf has "test1" 2 times  but is still used as argument only once

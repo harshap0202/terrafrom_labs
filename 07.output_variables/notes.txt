@@ -1,0 +1,9 @@
+here we use output variables
+
+we can set the output to be a variable
+which is stored and then can be seen using command as follows:
+
+$ terraform output
+file-output = "Pets are awesome!"
+pets-output = "My-handy-lynx"
+

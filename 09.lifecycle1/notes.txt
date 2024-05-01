@@ -1,0 +1,7 @@
+here we use lifecycle
+
+so if terrafrom file (main.tf) is ran, and then modified
+and then ran again.
+
+instead of deleting the pet.txt and then creating file
+it will create new pet.txt and then delete it.

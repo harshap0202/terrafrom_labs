@@ -1,0 +1,7 @@
+here we use datasource block
+
+this is used to access data from external sources.
+the "data" block is used to get content from that source
+and can be accessed using 
+	data.[type_of_resource].[resource_name].content
+

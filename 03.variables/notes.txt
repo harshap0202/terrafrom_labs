@@ -1,0 +1,6 @@
+here we use variables
+
+variables are stored in variables.tf.
+and accessed from there using 
+	var.(variable_name)
+

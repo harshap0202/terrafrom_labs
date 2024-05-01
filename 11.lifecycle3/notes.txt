@@ -1,0 +1,5 @@
+here we use lifecycle option - ignore_changes
+
+when terraform command is applied, if there are any changes in elements that are mentioned with ignore_changes
+those will not be counted, and terraform will not make any alterations to them.
+

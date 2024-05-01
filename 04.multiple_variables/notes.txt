@@ -1,0 +1,13 @@
+here we use multiple variables
+
+variables can have a type set to them while defining
+in this example we have used type as 
+
+ - string
+ - bool
+ - any
+ - number
+
+
+
+

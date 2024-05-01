@@ -1,0 +1,9 @@
+here we use multiple providers 
+
+We can use multiple providers and resources in Terraform. 
+here we have use "random" provider along with "local"
+
+it gives output in terminal as such
+	random_pet.info: Creating...
+	random_pet.info: Creation complete after 0s [id=My glowworm]
+

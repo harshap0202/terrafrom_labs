@@ -1,0 +1,13 @@
+here we use version_constraints argument
+
+this argument is used to make sure what version of provider is used in terrafrom
+else if gives error as such
+
+│ Error: Inconsistent dependency lock file
+│ 
+│ The following dependency selections recorded in the lock file are inconsistent with the current configuration:
+│   - provider registry.terraform.io/hashicorp/local: locked version selection 2.5.1 doesn't match the updated version constraints "2.5.0"
+│ 
+│ To update the locked dependency selections to match a changed configuration, run:
+│   terraform init -upgrade
+

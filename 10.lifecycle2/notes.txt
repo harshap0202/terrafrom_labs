@@ -1,0 +1,19 @@
+here we use lifecycle option prevent destroy
+
+when terraform command is applied, if the file is attempted to be destroyed
+this lifecycle option will prevent it and make sure file isn't destroyed.
+
+
+giving error like -
+
+│ Error: Instance cannot be destroyed
+│ 
+│   on main.tf line 1:
+│    1: resource "local_file" "pet" {
+│ 
+│ Resource local_file.pet has lifecycle.prevent_destroy set, but the plan calls
+│ for this resource to be destroyed. To avoid this error and continue with the
+│ plan, either disable lifecycle.prevent_destroy or reduce the scope of the
+│ plan using the -target option.
+╵
+
