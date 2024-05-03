@@ -1,0 +1,50 @@
+here we use taint command
+
+a resource is considered tainted when resource creation fails for any reason
+and on next apply it will be recreated.
+
+taint command can used when a resource needs to recreated in the next apply
+
+==========================================================
+
+$ terraform taint local_file.pet
+
+Resource instance local_file.pet has been marked as tainted.
+
+$ terraform apply
+
+local_file.pet: Refreshing state... [id=bc9cabef1d8b0071d3c4ae9959a9c328f35fe697]
+random_pet.info: Refreshing state... [id=My ostrich]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+  # local_file.pet is tainted, so must be replaced
+-/+ resource "local_file" "pet" {
+      ~ content_base64sha256 = "i7rWzn9abCr4YD3OzXUQ+IAKv/aHZDmZnMimppETNUA=" -> (known after apply)
+      ~ content_base64sha512 = "SjI4RcQ6Di69Yj68r+JFJ/Gl2J6jo/w0jGJvNWhlLVgZ5lHA0eRXnEwxLqb1yaHnU9VDaU9DZ1JrhxLRHhZxPg==" -> (known after apply)
+      ~ content_md5          = "e0911faa99c2a35a6d3d884ffbff6489" -> (known after apply)
+      ~ content_sha1         = "bc9cabef1d8b0071d3c4ae9959a9c328f35fe697" -> (known after apply)
+      ~ content_sha256       = "8bbad6ce7f5a6c2af8603dcecd7510f8800abff6876439999cc8a6a691133540" -> (known after apply)
+      ~ content_sha512       = "4a323845c43a0e2ebd623ebcafe24527f1a5d89ea3a3fc348c626f3568652d5819e651c0d1e4579c4c312ea6f5c9a1e753d543694f4367526b8712d11e16713e" -> (known after apply)
+      ~ id                   = "bc9cabef1d8b0071d3c4ae9959a9c328f35fe697" -> (known after apply)
+        # (4 unchanged attributes hidden)
+    }
+
+Plan: 1 to add, 0 to change, 1 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+local_file.pet: Destroying... [id=bc9cabef1d8b0071d3c4ae9959a9c328f35fe697]
+local_file.pet: Destruction complete after 0s
+local_file.pet: Creating...
+local_file.pet: Creation complete after 0s [id=bc9cabef1d8b0071d3c4ae9959a9c328f35fe697]
+
+Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
+

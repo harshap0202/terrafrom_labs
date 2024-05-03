@@ -1,0 +1,51 @@
+here we use terraform debugging
+
+Terraform offers file log levels as follows : 
+ - info
+ - warning
+ - error
+ - debug
+ - trace
+
+
+
+$ export TF_LOG=TRACE
+
+===================================================
+
+$ export TF_LOG_PATH=terraform.log
+
+===================================================
+
+$ terraform apply
+
+local_file.pet: Refreshing state... [id=bc9cabef1d8b0071d3c4ae9959a9c328f35fe697]
+random_pet.info: Refreshing state... [id=My ostrich]
+
+No changes. Your infrastructure matches the configuration.
+
+Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
+
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+
+===================================================
+
+$ cat terraform.log 
+
+2024-05-01T18:05:21.287+0530 [INFO]  Terraform version: 1.8.0
+2024-05-01T18:05:21.287+0530 [DEBUG] using github.com/hashicorp/go-tfe v1.41.0
+2024-05-01T18:05:21.287+0530 [DEBUG] using github.com/hashicorp/hcl/v2 v2.20.0
+2024-05-01T18:05:21.287+0530 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2024-05-01T18:05:21.287+0530 [DEBUG] using github.com/zclconf/go-cty v1.14.3
+2024-05-01T18:05:21.287+0530 [INFO]  Go runtime version: go1.22.1
+2024-05-01T18:05:21.287+0530 [INFO]  CLI args: []string{"terraform", "apply"}
+2024-05-01T18:05:21.287+0530 [TRACE] Stdout is a terminal of width 150
+.
+.
+.
+
+===================================================
+
+$ unset TF_LOG_PATH
+
+
